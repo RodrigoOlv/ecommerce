@@ -12,9 +12,9 @@ class Page {
 		"data"=>[]
 	];
 
-	public function __construc ( $opts = array() ) {
+	public function __construct ( $opts = array() ) {
 
-		$this->options = array_marge ( $this->defaults, $opts );
+		$this->options = array_merge ( $this->defaults, $opts );
 
 		$config = array(
 			"tpl_dir"       => $_SERVER["DOCUMENT_ROOT"] . "/views/",
@@ -46,7 +46,7 @@ class Page {
 		return $this->tpl->draw ( $name, $returnHTML );
 	}
 
-	public function __destruc () {
+	public function __destruct () {
 
 		$this->tpl->draw ( "footer" );
 
