@@ -12,7 +12,7 @@ class User extends Model {
 
 		$sql = new Sql ();
 
-		$results = $sql->select("SELECT * FROM tb_users WHERE deslogin = :LOGIN", array (
+		$results = $sql->select( "SELECT * FROM tb_users WHERE deslogin = :LOGIN", array (
 			":LOGIN"=>$login
 		));
 
@@ -26,7 +26,7 @@ class User extends Model {
 			
 			$user = new User ();
 
-			$user->setiData ( $data );
+			$user->setData ( $data );
 
 			$_SESSION[User::SESSION] = $user->getValues();
 
