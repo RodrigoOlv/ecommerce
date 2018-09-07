@@ -89,9 +89,9 @@ class User extends Model {
 			":desperson"=>$this->getdesperson(),
 			":deslogin"=>$this->getdeslogin(),
 			":despassword"=>$this->getdespassword(),
-			":desemail"=>$this->desemail(),
+			":desemail"=>$this->getdesemail(),
 			":nrphone"=>$this->getnrphone(),
-			":inadimin"=>$this->getinadmin()
+			":inadmin"=>$this->getinadmin()
 		));
 
 		$this->setData($results[0]);
